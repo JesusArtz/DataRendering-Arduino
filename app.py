@@ -8,12 +8,8 @@ CORS(app)
 
 @app.route('/')
 def index():
-    data = functions.get_humedad()
-    return render_template('app.html', data=data)
-
-@app.route('/humedad')
-def viewHumedad():
     return render_template('graficas.html')
+
  
 @app.route('/postTemp/<temp>', methods=["GET"])
 def insert_temp(temp):

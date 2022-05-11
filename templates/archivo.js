@@ -8,6 +8,7 @@ function renderChart() {
 
 
 function datar2(ctx){
+   
 
     async function getHum() {
         let headersList = {
@@ -41,9 +42,12 @@ function datar2(ctx){
                         label: 'Humedad',
                         borderColor: '#348feb',
                         data: temperatura,
-                        tension: 0.1,
+                        
                     }
                 ]
+            },
+            options: {
+                responsive: false,
             }
         })
 
@@ -54,6 +58,8 @@ function datar2(ctx){
 
 
 function datar1(ctx){
+
+    
 
     async function getHum() {
         let headersList = {
@@ -89,18 +95,15 @@ function datar1(ctx){
                         pointBorderColor: '#2a12ff',
                         hoverBorderColor: '#2a12ff',
                         data: humedad,
-                        tension: 0.1,
+                        
                     }
                 ]
+            },
+            options: {
+                responsive: false,
             }
         })
-        
     })
 }
 
 renderChart()
-
-
-
-
-
