@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Graficas</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>    
+    </head>
+    <body>
+        <div width="800" height="400">
+            <canvas id="chart1" ></canvas>
+        </div>
+        <div width="800" height="400">
+            <canvas id="chart2"></canvas>
+        </div>
+        
+        <!--<script>
+            
+            function datar(ctx){
+                
+
+                function getHum() {
+                    let headersList = {
+                        "Accept": "*/*",
+                        "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+                    }
+                    let request = fetch("http://192.168.0.17:8000/getHum", {
+                        method: "GET",
+                        headers: headersList
+                    });
+
+                    request.then(response => response.json()).then(data => console.log(data));
+                };
+
+                
+                
+                
+                const chart = new Chart(ctx,{
+                    type: 'line',
+                    data: {
+                        labels: /*Object.values(getHum()).map(item => item.id)*/a,
+                        
+                        datasets: [
+                            {
+                                label: 'Humedad',
+                                borderColor: '#348feb',
+                                data: [1],
+                            },
+                            {
+                                label: 'Temperatura',
+                                borderColor: '#79d1e0',
+                                data: [23, 31, 19],
+                            }
+                        ]
+                    }
+                })
+            }
+
+            function renderChart(){
+                const ctx = document.querySelector('#chart').getContext('2d')
+                datar(ctx)
+            }
+
+            renderChart()
+        </script>-->
+        <script src="archivo.js"></script>
+    </body>
+</html>
