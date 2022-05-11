@@ -7,8 +7,8 @@
     </head>
     <body>
       
-            <canvas id="chart1" width="800" height="400"></canvas>
-            <canvas id="chart2" width="800" height="400"></canvas>
+            <canvas id="chart1" width="1300" height="400"></canvas>
+            <canvas id="chart2" width="1300" height="400"></canvas>
         
         
         <script>
@@ -31,7 +31,7 @@
                         "User-Agent": "Thunder Client (https://www.thunderclient.com)"
                     };
 
-                    const request = await fetch("http://137.184.94.16:8000/getTemp", {
+                    const request = await fetch("http://192.168.0.17:8000/getTemp", {
                         method: "GET",
                         headers: headersList
                     });
@@ -57,7 +57,8 @@
                                     label: 'temperatura',
                                     borderColor: '#348feb',
                                     data: temperatura,
-                                    loop: true,
+                                    radius: 0,
+                                    tension: 0.5
                                 }
                             ]
                         },
@@ -82,7 +83,7 @@
                         "User-Agent": "Thunder Client (https://www.thunderclient.com)"
                     };
 
-                    const request = await fetch("http://137.184.94.16:8000/getHum", {
+                    const request = await fetch("http://192.168.0.17:8000/getHum", {
                         method: "GET",
                         headers: headersList
                     });
@@ -108,7 +109,8 @@
                                     label: 'Humedad',
                                     borderColor: '#42b9f5',
                                     data: humedad,
-                                    loop: true,
+                                    radius: 0,
+                                    tension: 0.5
                                 }
                             ]
                         },

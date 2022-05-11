@@ -24,13 +24,13 @@ def insert_humedad(valor):
 def get_humedad():
     db = get_db()
     cursor = db.cursor()
-    query = "SELECT id, humedad FROM humedad ORDER BY id DESC LIMIT 50"
+    query = "SELECT id, humedad FROM humedad ORDER BY id DESC LIMIT 500"
     cursor.execute(query)
     return cursor.fetchall()    
 
 def get_temp():
     db = get_db()
     cursor = db.cursor()
-    query = "SELECT id, temperatura FROM temperatura ORDER BY id DESC LIMIT 50"
+    query = "SELECT id, temperatura FROM temperatura ORDER BY id DESC LIMIT 500"
     cursor.execute(query)
     return cursor.fetchall()

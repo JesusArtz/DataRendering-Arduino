@@ -31,6 +31,7 @@ def insert_hum(hum):
 def getHumedad():
     data = functions.get_humedad()
     response = {x: {"id": y[0], "humedad": y[1]} for x, y in enumerate(data)}
+    
     return jsonify(response)
 
 
