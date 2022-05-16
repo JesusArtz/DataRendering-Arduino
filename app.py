@@ -27,19 +27,12 @@ def insert_hum(hum):
     return jsonify(result)
 
 
-@app.route('/getHum', methods=["GET"])
-def getHumedad():
-    data = functions.get_humedad()
-    response = {x: {"id": y[0], "humedad": y[1]} for x, y in enumerate(data)}
-    
-    return jsonify(response)
+@app.route('/getData', methods=["GET"])
+def getData():
+    dataHum = *map(lambda x: x[1], functions.get_humedad()),
+    dataTemp = *map(lambda x: x[1], functions.get_temp()),
 
-
-@app.route('/getTemp', methods=["GET"])
-def getTemperatura():
-    data = functions.get_temp()
-    response = {x: {"id": y[0], "temperatura": y[1]} for x, y in enumerate(data)}
-    return jsonify(response)
+    return jsonify({"temperatura":dataTemp, "humedad":dataHum})
 
 
 app.run(host='0.0.0.0', port=8000, debug=False) 
